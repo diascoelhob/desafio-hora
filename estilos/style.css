@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: rgb(158, 193, 214);
+}
+
+header {
+    color: white;
+    margin: 20px;
+}
+
+main {
+    background-color: white;
+    width: 60vw;
+    min-width: 450px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+main > h2 {
+    padding-bottom: 20px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+footer {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 20px;
+}

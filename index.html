@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio na Web</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <main>
+        <h2>Agora são <div id="horas" style="display: inline;"></div>:<div id="minutos" style="display: inline;"></div> hora(s)</h2>
+        <div id="img"></div>
+    </main>
+    <footer>
+        <p>© Bruno Coelho Dias</p>
+    </footer>
+    <script>
+        var agora = new Date
+
+        var hora = String(agora.getHours()).padStart(2, '0')
+        var minuto = String(agora.getMinutes()).padStart(2, '0')
+
+        var horas = document.querySelector('div#horas')
+        var minutos = document.querySelector('div#minutos')
+        
+        horas.innerHTML = `${hora}`
+        minutos.innerHTML = `${minuto}`
+
+        var img = window.document.querySelector("div#img")
+        if (hora < 12) {
+            img.innerHTML = `<img id="paisagem" src="imagens/manha.jpg" alt="manhã">`
+        } else if (hora < 18) {
+            img.innerHTML = `<img id="paisagem" src="imagens/tarde.jpg" alt="tarde">`
+        } else if (hora < 24) {
+            img.innerHTML = `<img id="paisagem" src="imagens/noite.jpg" alt="noite">`
+        }
+    </script>
+</body>
+</html>
