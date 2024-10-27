@@ -32,10 +32,13 @@
         var img = window.document.querySelector("div#img")
         if (hora < 12) {
             img.innerHTML = `<img id="paisagem" src="imagens/manha.jpg" alt="manhã">`
+            document.body.style.background = 'orange'
         } else if (hora < 18) {
             img.innerHTML = `<img id="paisagem" src="imagens/tarde.jpg" alt="tarde">`
+            document.body.style.background = '#E9C2A6'
         } else if (hora < 24) {
             img.innerHTML = `<img id="paisagem" src="imagens/noite.jpg" alt="noite">`
+            document.body.style.background = 'lightgrey'
         }
     </script>
 </body>
